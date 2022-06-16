@@ -8,6 +8,7 @@ import com.saini.aditi.controller.model.Employee;
 public class PopulateData {
 
 	private static List<Employee> employeeList = new ArrayList<Employee>();
+	private static long lastId = (long)118;
 	static {
 		employeeList.add(new Employee((long)111, 22, "Aditi1", "Saini", "Dehradun1", "aditi1.saini@gmail.com"));
 		employeeList.add(new Employee((long)112, 23, "Aditi2", "Saini", "Dehradun2", "aditi2.saini@gmail.com"));
@@ -21,6 +22,13 @@ public class PopulateData {
 	
 	public static List<Employee> getData() {
 		return employeeList;
+	}
+	
+	public static long getLastId() {
+		return lastId;
+	}
+	public static void setLastId(long newLastId) {
+		lastId = newLastId;
 	}
 	
 }

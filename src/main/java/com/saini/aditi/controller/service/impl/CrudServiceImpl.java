@@ -49,8 +49,24 @@ public class CrudServiceImpl implements CrudService {
 
 	@Override
 	public long deleteEmployee(long id) {
+		List<Employee> employeeList = PopulateData.getData();
+		Optional<Employee> empObject = employeeList.stream()
+					.filter(e -> e.getId() == id)
+					.findFirst();
+		employeeList.remove(empObject.get());
 		return (long)1;
 
+	}
+
+	@Override
+	public Employee addEmployee(Employee employee) throws EmployeeNotFoundException {
+		List<Employee> employeeList = PopulateData.getData();
+		long lastId = PopulateData.getLastId();
+		Employee newEmployee = new Employee(lastId+1, employee.getAge(), employee.getFirstName(), employee.getLastName(),
+				employee.getAddress(), employee.getEmail());
+		employeeList.add(newEmployee);
+		PopulateData.setLastId((lastId+1));
+		return null;
 	}
 
 }
