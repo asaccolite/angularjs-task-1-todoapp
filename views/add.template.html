@@ -1,0 +1,14 @@
+<div ng-controller = 'addCtrl' class="container">
+    <h1>{{ addPage }}</h1>
+    <form>
+        <div class="row">
+            Age: <input type="text" ng-model = "empAge">
+            First Name: <input type="text" ng-model = "employee.firstName" name = "firstName">
+            Last Name: <input type="text" ng-model = "employee.lastName" name = "lastName">
+            Address: <input type="text" ng-model = "employee.address" name = "address">
+            Email: <input type="email" ng-model = "employee.email" name = "email">
+        </div>
+        {{ empFirstName }}
+        <button ng-click="addEmployee()">Submit</button>
+    </form>
+</div>
