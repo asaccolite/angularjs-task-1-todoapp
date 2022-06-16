@@ -3,33 +3,33 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-8"><h2>{{ homePage }}</h2></div>
-                <div class="col-sm-4">
+                <div class="col-sm-4" style = "text-align:right">
                     <button type="button" class="btn btn-info add-new"
                      ng-click="addEmployee()"><i class="fa fa-plus"></i> Add New</button>
                 </div>
             </div>
         </div>
-    <table class="table table-hover">
+    <table class="table table-bordered justify-content-center">
         <thead class="thead-dark">
-            <th>#</th>
-            <th>Age</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Address</th>
-            <th>Email</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th class="text-center">#</th>
+            <th class="text-center">Age</th>
+            <th class="text-center">First Name</th>
+            <th class="text-center">Last Name</th>
+            <th class="text-center">Address</th>
+            <th class="text-center">Email</th>
+            <th class="text-center" colspan="2">Action</th>
+            <!--<th>Delete</th>-->
         </thead>
         <tbody>
             <tr ng-repeat = "employee in employees">
-                <th>{{ employee.id }}</th>
-                <th>{{ employee.age }}</th>
-                <th>{{ employee.firstName }}</th>
-                <th>{{ employee.lastName }}</th>
-                <th>{{ employee.address }}</th>
-                <th>{{ employee.email }}</th>
-                <th><a ng-href='/update/{{employee.id}}'><span class="bi bi-pencil"></span></a></th>
-                <th><a ng-href='/delete/{{employee.id}}'><i class="bi bi-trash"></i></a></th>
+                <td class="text-center">{{ employee.id }}</td>
+                <td class="text-center">{{ employee.age }}</td>
+                <td class="text-center">{{ employee.firstName }}</td>
+                <td class="text-center">{{ employee.lastName }}</td>
+                <td class="text-center">{{ employee.address }}</td>
+                <td class="text-center">{{ employee.email }}</td>
+                <th class="text-center"><a ng-href='/update/{{employee.id}}' style="padding-right: 10px;"><span class="bi bi-pencil"></span></a>
+                <a ng-href='/delete/{{employee.id}}' style="padding-left: 10px;"><i class="bi bi-trash"></i></a></th>
             </tr>
         </tbody>
     </table>
