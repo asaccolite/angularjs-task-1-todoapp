@@ -10,7 +10,7 @@
             </div>
         </div>
     <table class="table table-bordered justify-content-center table-hover">
-        <thead class="thead-dark">
+        <thead class="thead-dark th">
             <th class="text-center">#</th>
             <th class="text-center">Age</th>
             <th class="text-center">First Name</th>
@@ -21,7 +21,7 @@
             <!--<th>Delete</th>-->
         </thead>
         <tbody>
-            <tr ng-repeat = "employee in employees">
+            <tr class = "row-striped" ng-repeat = "employee in employees">
                 <td class="text-center">{{ employee.id }}</td>
                 <td class="text-center">{{ employee.age }}</td>
                 <td class="text-center">{{ employee.firstName }}</td>

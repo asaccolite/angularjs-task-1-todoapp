@@ -5,3 +5,13 @@
     padding: 20px;	
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
+.th {
+    background-color: rgb(68, 68, 183);
+    color: white;
+} 
+.row-striped:nth-of-type(odd){
+    background-color: #efefef;
+  }
+.row-striped:nth-of-type(even){
+background-color: #ffffff;
+}
