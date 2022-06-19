@@ -33,7 +33,7 @@
             //console.log(response.data);
             //$scope.error = false;
             //$scope.employees = response.data;
-            $location.path('/');
+            $location.path('/home');
         },
         (error) => {
             console.log("error");

@@ -1,14 +1,20 @@
 <div ng-controller = 'addCtrl' class="container">
     <h1>{{ addPage }}</h1>
-    <form>
+    <form name="myForm">
         <div class="row">
-            Age: <input type="text" ng-model = "employee.age">
-            First Name: <input type="text" ng-model = "employee.firstName">
-            Last Name: <input type="text" ng-model = "employee.lastName">
-            Address: <input type="text" ng-model = "employee.address">
-            Email: <input type="email" ng-model = "employee.email">
+            Age: <input type="number" min="18" max="99" ng-model = "employee.age" name="age" required class="form-control">
+            <div ng-show="myForm.age.$error.required &amp;&amp; myForm.age.$touched" class="error">Required!</div>
+            <div ng-show="myForm.age.$error.number" class="error">Must be between 18 & 99</div>
+            First Name: <input type="text" ng-model = "employee.firstName" name="firstName" required class="form-control">
+            <div ng-show="myForm.firstName.$error.required &amp;&amp; myForm.firstName.$touched" class="error">Required!</div>
+            Last Name: <input type="text" ng-model = "employee.lastName" name = "lastName" required class="form-control">
+            <div ng-show="myForm.lastName.$error.required &amp;&amp; myForm.lastName.$touched" class="error">Required!</div>
+            Address: <input type="text" ng-model = "employee.address" name = "address" required class="form-control">
+            <div ng-show="myForm.address.$error.required &amp;&amp; myForm.address.$touched" class="error">Required!</div>
+            Email: <input type="email" ng-model = "employee.email" name = "email" required class="form-control">
+            <div ng-show="myForm.email.$error.email" class="error">Invalid email!</div>
+            <div ng-show="myForm.email.$error.required &amp;&amp; myForm.email.$touched" class="error">Required!</div>
         </div>
-        {{ empFirstName }}
-        <button ng-click="addEmployee()">Submit</button>
+        <button ng-click="addEmployee()" ng-disabled="myForm.$invalid">Submit</button>
     </form>
 </div>

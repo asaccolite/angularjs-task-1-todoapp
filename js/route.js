@@ -1,7 +1,25 @@
 (function () {
-    angular.module("myapp")
+    var myapp = angular.module("myapp", ["ngRoute"]);
+    //angular.module("myapp")
+
+    myapp.run(function($location, LoginService) {
+        console.clear();
+        console.log('running');
+        LoginService.setAuthenticationFalse(false);
+        $location.path("/");
+     });
+
+    myapp
     .config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) => {
     $routeProvider
+    .when('/', {
+        templateUrl: 'views/login.template.html',
+        controller: 'LoginController'
+    })
+    .when('/home', {
+        templateUrl: 'views/employees.template.html',
+        controller: 'LoginController'
+    })
     .when('/update/:id', {
         templateUrl: 'views/update.template.html',
         controller: 'updateCtrl'
@@ -17,7 +35,7 @@
     .when('/updateEmployee', {
         templateUrl: 'views/employees.html'
     })
-    .when('/', {
+    .when('/home', {
         templateUrl: 'views/employees.html',
         controller: 'myctrl'
     })

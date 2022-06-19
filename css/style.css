@@ -13,5 +13,31 @@
     background-color: #efefef;
   }
 .row-striped:nth-of-type(even){
-background-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.login-container{
+    max-width: 50%; 
+    margin: 60px auto 0;
+}
+  
+.error{
+    color: tomato; 
+    font-size: 12px; 
+    padding-top: 10px
+}
+input.ng-touched, input.ng-invalid {
+    background-color: cornsilk;
+}
+input.ng-valid {
+    background-color: #ffffff;
+}
+
+.myForm {
+    -webkit-box-shadow: 18px 17px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 17px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 18px 17px 5px 0px rgba(0,0,0,0.75);
+}
+.input-group-addon .fa {
+    font-size: 18px;
 }
