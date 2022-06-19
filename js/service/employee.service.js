@@ -4,7 +4,7 @@
     
     function MyService($http){
         this.employees = [];
-        this.error = 'manoj';
+        this.error = 'aditi';
         this.getAllEmployees = () => {
             return $http.get("http://localhost:8080/v1/getEmployees"); 
         }
