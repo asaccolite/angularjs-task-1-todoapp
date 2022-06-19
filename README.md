@@ -30,6 +30,8 @@ myscipt - this is for the home page that shows al the employee details .
 
 updatecontoller - this works when we choose the edit option and want to update the deatils od already existing employee . 
 
+logincontroller - this for the login page 
+
 VIEWS 
 
 addtemplate - this works when we want to add new employee this the HTML file and is bounded with addCTRL controller 
@@ -40,6 +42,13 @@ employess- this is the homepage to show all the employess names and other crud o
 updatemplate - connected with updatecontoller , updates the exsiting employee deatils 
 
 index- main index file that have ng-app defined and from where the site starts to work . 
+
+logintemplate - this is the first page we see as for loging into the application , 
+
+username - admin 
+password - password 
+
+addtemplate - that have form validation for the add new  page and defines that when we add a new page we have to insusre that age is in number format only and is btw 18 to 999
 
 
 Functionality included :
