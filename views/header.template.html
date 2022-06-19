@@ -1,0 +1,13 @@
+<div class = "row" ng-controller = "LoginController">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">{{ title }}</a>
+          <div class="d-flex">
+            <div class="col-md-8" ng-show = "isAuthenticated()">
+                <button class="btn btn-outline-success" ng-click = "logout()" type="submit">Logout</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+</div>
+

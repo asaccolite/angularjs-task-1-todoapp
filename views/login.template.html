@@ -1,0 +1,43 @@
+<div ng-controller = "LoginController" class="container">
+  <form name="myForm">
+      <div class="myForm border border-primary" style="width: 50%; margin-left: 15em; margin-top:5%; background-color:aliceblue;">
+        <div class="row" style="margin-top: 15%; margin-left: 14%; margin-bottom: 15%;">
+          <div class="col-md-10">
+            <h2 class="text-center">Sign In</h2> 
+            <div class="form-group input-group" style="width: auto;">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <span class="fa fa-user"></span>
+                </span>
+              </div>
+              <input type="text" name="username" ng-model="username" placeholder = "username" required class="form-control">
+              <div ng-show="myForm.username.$error.required &amp;&amp; myForm.username.$touched" class="error">Required!</div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-lock"></i>
+                </span>                    
+            </div>
+              <input type="password" name="pass" ng-model="password" placeholder = "password" required class="form-control">
+              <div ng-show="myForm.pass.$error.required &amp;&amp; myForm.pass.$touched" class="error">Required!</div>
+            </div>
+          </div>
+          <div class="col-md-10" style="width: 80%;">
+            <div class="form-group d-grid gap-2" style = "text-align: center; padding-top: 15px;">
+              <button type = "submit" ng-click="formSubmit()" ng-disabled="myForm.$invalid" class="btn btn-success">Login</button>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="error col-md-12">
+            <div ng-show="error" class="alert alert-danger">{{ error }}</div>
+            <div ng-show="showSuccess" class="alert alert-success">Login Successful!</div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
