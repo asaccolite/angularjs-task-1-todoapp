@@ -72,5 +72,7 @@ deletecontroller
 updatecontoller 
 
 10. AngularJs- nesting 
+ 
+11. Promise-AngularJS
 
 used basic git bash commands to push the code in the github 
